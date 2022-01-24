@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Linear Regression </h1>
+    <table style="border: none;">
+    <form action="{{url_for('predict')}}" method="POST">
+       
+        <tr>
+            <td> Average Area Icome </td>
+
+      <td>  <input type="number" max="" min="" id="area" name="area" required></td>
+
+    </tr>
+    <tr>
+        <td> Average Area House Age
+            </td>
+        <td><input type="number" max="" min="" id="house_age" name="house_age" required>
+        </td>
+    </tr>
+    <tr>
+        <td> Average Area Number of Rooms
+        </td>
+
+      <td>  <input type="number" max="" min="" id="no_of_rooms" name="no_of_rooms" required>
+      </td>
+    </tr>
+
+    <tr>
+        <td> Average Area Number of Bedrooms
+        </td>
+        <td>
+        <input type="number" max="" min="" id="no_of_bedrooms" name="no_of_bedrooms" required>
+        </td>
+    </tr>
+    
+
+        <tr>
+            <td>  Population
+            </td>
+            <td>
+            <input type="number" max="" min="" id="population" name="population" required>
+        </td>
+        </tr>
+        <td> 
+            <tr> 
+                <input type="submit" value="Predict">
+                </tr>
+            </td>
+    
+
+
+
+    </form>
+</table>
+<p>
+    Predicted Price:
+{{pred_text}}
+</p>
+
+ 
+{% endblock %}
